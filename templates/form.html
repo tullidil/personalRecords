@@ -1,0 +1,20 @@
+<script type="text/javascript">
+function validateForm() {
+    var firstName=document.forms["entryForm"]["first_name"].value;
+    var lastName=document.forms["entryForm"]["last_name"].value;
+    var phone=document.forms["entryForm"]["phone"].value;
+    if (firstName==null || firstName=="" || lastName==null || lastName==""
+            || phone==null || phone=="") {
+        alert("You must enter at least your first name, last name," +
+                " and phone number")
+        return false
+    }
+}
+</script>
+ 
+<form name="entryForm" action="{% url personalRecords:index %}" onsubmit="return validateForm()" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+

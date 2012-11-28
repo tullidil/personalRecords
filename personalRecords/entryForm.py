@@ -7,6 +7,6 @@ class entryForm(forms.Form):
     city = forms.CharField(max_length=50, required=False)
     state = forms.CharField(max_length=50, required=False)
     zip_code = forms.IntegerField(required=False)
-    email = forms.CharField(max_length=50i, required=False)
-    phone_number = forms.IntegerField()
+    email = forms.CharField(max_length=50, required=False)
+    phone = forms.IntegerField()
 
