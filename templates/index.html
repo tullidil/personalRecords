@@ -1,0 +1,8 @@
+{% if records %}
+    <ul>
+    {% for record in records %}
+        <li><a href="{% url personalRecords:detail record.id %}">{{ record.first_name }}</a></li>
+    {% endfor %}
+{% else %}
+    <p>No records were found. Sorry! :[</p>
+{% endif %}

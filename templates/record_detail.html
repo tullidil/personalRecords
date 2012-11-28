@@ -1,0 +1,13 @@
+{% if first_name %}
+    <ul>
+        <li>First Name: {{first_name}}</li>
+        <li>Last Name: {{last_name}}</li>
+        <li>Address: {{address}}</li>
+        <li>City: {{city}}</li> 
+        <li>State: {{state}}</li>
+        <li>Zip Code: {{zip_code}}</li>
+    </ul>
+{% else %}
+    <p> No record with that ID seems to exist. Sorry! :[ </p>
+{% endif %}
+    
